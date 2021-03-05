@@ -1,5 +1,7 @@
 package net.shortninja.staffplusplus;
 
+import net.shortninja.staffplusplus.staffmode.chat.StaffChatService;
+
 import java.util.UUID;
 
 public interface IStaffPlus {
@@ -10,4 +12,5 @@ public interface IStaffPlus {
 
     boolean isPlayerVanished(UUID playerUuid);
 
+    StaffChatService getStaffChatService();
 }
