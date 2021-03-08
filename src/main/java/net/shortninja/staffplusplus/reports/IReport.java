@@ -33,4 +33,6 @@ public interface IReport {
     String getServerName();
 
     Optional<Location> getLocation();
+
+    Optional<String> getReportType();
 }
