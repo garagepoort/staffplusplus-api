@@ -13,9 +13,9 @@ public interface IKick {
 
     String getReason();
 
-    String getPlayerName();
+    String getTargetName();
 
-    UUID getPlayerUuid();
+    UUID getTargetUuid();
 
     String getIssuerName();
 

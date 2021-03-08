@@ -1,34 +1,30 @@
 package net.shortninja.staffplusplus.warnings;
 
 import net.shortninja.staffplusplus.Actionable;
+import net.shortninja.staffplusplus.appeals.Appealable;
 
 import java.time.ZonedDateTime;
-import java.util.Optional;
 import java.util.UUID;
 
-public interface IWarning extends Actionable {
+public interface IWarning extends Actionable, Appealable {
 
-    String getReason();
+    int getId();
+
+    String getTargetName();
+
+    UUID getTargetUuid();
 
     String getIssuerName();
 
     UUID getIssuerUuid();
 
-    void setIssuerName(String newName);
-
-    UUID getUuid();
-
-    int getId();
-
-    String getName();
+    String getReason();
 
     int getScore();
 
     String getSeverity();
 
-    ZonedDateTime getTimestamp();
+    ZonedDateTime getCreationDate();
 
     String getServerName();
-
-    Optional<? extends IWarningAppeal> getAppeal();
 }

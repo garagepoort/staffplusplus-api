@@ -8,7 +8,7 @@ public interface ITrace {
 
     UUID getTracerUuid();
 
-    String getTracedName();
+    String getTargetName();
 
-    UUID getTracedUuid();
+    UUID getTargetUuid();
 }
