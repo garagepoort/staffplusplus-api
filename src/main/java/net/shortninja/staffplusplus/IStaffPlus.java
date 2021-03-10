@@ -1,8 +1,7 @@
 package net.shortninja.staffplusplus;
 
+import net.shortninja.staffplusplus.session.SessionManager;
 import net.shortninja.staffplusplus.staffmode.chat.StaffChatService;
-
-import java.util.UUID;
 
 public interface IStaffPlus {
 
@@ -10,7 +9,7 @@ public interface IStaffPlus {
         throw new UnsupportedOperationException("Not implemented!");
     }
 
-    boolean isPlayerVanished(UUID playerUuid);
-
     StaffChatService getStaffChatService();
+
+    SessionManager getSessionManager();
 }
