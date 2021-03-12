@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.reports;
 
+import net.shortninja.staffplusplus.ILocation;
 import org.bukkit.Location;
 
 import java.time.ZonedDateTime;
@@ -32,7 +33,10 @@ public interface IReport {
 
     String getServerName();
 
+    @Deprecated
     Optional<Location> getLocation();
+
+    Optional<ILocation> getSppLocation();
 
     Optional<String> getReportType();
 }
