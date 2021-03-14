@@ -6,4 +6,6 @@ public interface StaffChatService {
     void sendMessage(CommandSender sender, String message);
 
     void sendMessage(String senderName, String message);
+
+    void sendMessage(String message);
 }
