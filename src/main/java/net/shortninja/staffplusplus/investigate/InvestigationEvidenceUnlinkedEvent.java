@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.investigate;
 
+import net.shortninja.staffplusplus.investigate.evidence.IInvestigationEvidence;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 

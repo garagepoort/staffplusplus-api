@@ -1,4 +1,4 @@
-package net.shortninja.staffplusplus.investigate;
+package net.shortninja.staffplusplus.investigate.evidence;
 
 import java.time.ZonedDateTime;
 import java.util.UUID;
@@ -9,7 +9,7 @@ public interface IInvestigationEvidence {
 
     int getEvidenceId();
 
-    EvidenceType getEvidenceType();
+    String getEvidenceType();
 
     UUID getLinkedByUuid();
 
