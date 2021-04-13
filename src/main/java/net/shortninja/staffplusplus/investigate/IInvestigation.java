@@ -20,9 +20,9 @@ public interface IInvestigation {
 
     UUID getInvestigatorUuid();
 
-    String getInvestigatedName();
+    Optional<String> getInvestigatedName();
 
-    UUID getInvestigatedUuid();
+    Optional<UUID> getInvestigatedUuid();
 
     String getServerName();
 
