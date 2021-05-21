@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.session;
 
+import java.util.Optional;
 import java.util.UUID;
 
 public interface IPlayerSession {
@@ -9,7 +10,7 @@ public interface IPlayerSession {
 
     boolean isInStaffMode();
 
-    boolean inStaffChatMode();
+    Optional<String> getActiveStaffChatChannel();
 
     boolean isFrozen();
 

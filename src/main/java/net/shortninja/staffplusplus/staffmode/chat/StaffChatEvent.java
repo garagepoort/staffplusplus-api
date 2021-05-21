@@ -11,11 +11,17 @@ public class StaffChatEvent extends Event {
     private final Player player;
     private final String serverName;
     private final String message;
+    private final String channel;
 
-    public StaffChatEvent(Player player, String serverName, String message) {
+    public StaffChatEvent(Player player, String serverName, String message, String channel) {
         this.player = player;
         this.serverName = serverName;
         this.message = message;
+        this.channel = channel;
+    }
+
+    public String getChannel() {
+        return channel;
     }
 
     public Player getPlayer() {
