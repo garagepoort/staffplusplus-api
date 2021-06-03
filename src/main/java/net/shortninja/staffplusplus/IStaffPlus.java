@@ -5,6 +5,7 @@ import net.shortninja.staffplusplus.mute.MuteService;
 import net.shortninja.staffplusplus.reports.ReportService;
 import net.shortninja.staffplusplus.session.SessionManager;
 import net.shortninja.staffplusplus.staffmode.chat.StaffChatService;
+import net.shortninja.staffplusplus.warnings.WarningService;
 
 public interface IStaffPlus {
 
@@ -21,4 +22,6 @@ public interface IStaffPlus {
     MuteService getMuteService();
 
     ReportService getReportService();
+
+    WarningService getWarningService();
 }

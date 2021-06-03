@@ -1,18 +1,18 @@
-package net.shortninja.staffplusplus.reports;
+package net.shortninja.staffplusplus.common;
 
-public class ReportFilter<T> {
+public class SqlFilter<T> {
 
     private T value;
     private int sqlType;
     private String sqlColumn;
     private String operator = "=";
 
-    public ReportFilter(T value, int sqlType, String sqlColumn) {
+    public SqlFilter(T value, int sqlType, String sqlColumn) {
         this.value = value;
         this.sqlType = sqlType;
         this.sqlColumn = sqlColumn;
     }
-    public ReportFilter(T value, int sqlType, String sqlColumn, String operator) {
+    public SqlFilter(T value, int sqlType, String sqlColumn, String operator) {
         this.value = value;
         this.sqlType = sqlType;
         this.sqlColumn = sqlColumn;
