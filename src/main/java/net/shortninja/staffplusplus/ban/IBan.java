@@ -34,4 +34,8 @@ public interface IBan {
     String getHumanReadableDuration();
 
     String getServerName();
+
+    boolean isSilentBan();
+
+    boolean isSilentUnban();
 }
