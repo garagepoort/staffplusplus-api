@@ -2,10 +2,11 @@ package net.shortninja.staffplusplus.altdetect;
 
 public enum AltDetectTrustLevel {
 
-    POSITIVE(4),
-    FAIRLY_POSITIVE(3),
-    POSSIBLE(2),
-    NOT_LIKELY(1);
+    POSITIVE(5),
+    FAIRLY_POSITIVE(4),
+    POSSIBLE(3),
+    NOT_LIKELY(2),
+    SAME_IP(1);
 
     private final int score;
 
