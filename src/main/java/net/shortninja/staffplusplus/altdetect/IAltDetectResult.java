@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.altdetect;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface IAltDetectResult {
@@ -14,4 +15,8 @@ public interface IAltDetectResult {
     String getPlayerMatchedName();
 
     AltDetectTrustLevel getAltDetectTrustLevel();
+
+    List<AltDetectResultType> getAltDetectResultTypes();
+
+    boolean isIpMatched();
 }

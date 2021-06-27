@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.session;
 
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 import java.util.Objects;
@@ -11,7 +12,16 @@ public class SppPlayer {
     private final String username;
     private final boolean online;
     private Player player;
+    private OfflinePlayer offlinePlayer;
 
+    public SppPlayer(UUID id, String username, OfflinePlayer offlinePlayer) {
+        this.id = id;
+        this.username = username;
+        this.online = false;
+        this.offlinePlayer = offlinePlayer;
+    }
+
+    @Deprecated
     public SppPlayer(UUID id, String username) {
         this.id = id;
         this.username = username;
@@ -35,6 +45,10 @@ public class SppPlayer {
 
     public boolean isOnline() {
         return online;
+    }
+
+    public OfflinePlayer getOfflinePlayer() {
+        return offlinePlayer;
     }
 
     public Player getPlayer() {
