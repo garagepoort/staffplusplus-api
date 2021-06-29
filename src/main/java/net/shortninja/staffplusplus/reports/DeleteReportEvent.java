@@ -11,9 +11,15 @@ public class DeleteReportEvent extends Event {
      * Report in question
      */
     private final IReport report;
+    private final String deletedByName;
 
-    public DeleteReportEvent(IReport report) {
+    public DeleteReportEvent(IReport report, String deletedByName) {
         this.report = report;
+        this.deletedByName = deletedByName;
+    }
+
+    public String getDeletedByName() {
+        return deletedByName;
     }
 
     public IReport getReport() {

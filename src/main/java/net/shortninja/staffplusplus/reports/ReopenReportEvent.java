@@ -11,9 +11,15 @@ public class ReopenReportEvent extends Event {
      * Report in question
      */
     private final IReport report;
+    private final String reopenedByName;
 
-    public ReopenReportEvent(IReport report) {
+    public ReopenReportEvent(IReport report, String reopenedByName) {
         this.report = report;
+        this.reopenedByName = reopenedByName;
+    }
+
+    public String getReopenedByName() {
+        return reopenedByName;
     }
 
     public IReport getReport() {
