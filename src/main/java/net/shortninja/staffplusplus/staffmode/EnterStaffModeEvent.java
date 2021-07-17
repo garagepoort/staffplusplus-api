@@ -14,12 +14,14 @@ public class EnterStaffModeEvent extends Event {
     private final UUID playerUuid;
     private final Location location;
     private final String serverName;
+    private final String mode;
 
-    public EnterStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName) {
+    public EnterStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName, String mode) {
         this.playerName = playerName;
         this.playerUuid = playerUuid;
         this.location = location;
         this.serverName = serverName;
+        this.mode = mode;
     }
 
     public String getPlayerName() {
@@ -36,6 +38,10 @@ public class EnterStaffModeEvent extends Event {
 
     public String getServerName() {
         return serverName;
+    }
+
+    public String getMode() {
+        return mode;
     }
 
     @Override
