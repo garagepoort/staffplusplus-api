@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.xray;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
@@ -16,13 +17,17 @@ public class XrayEvent extends Event {
     private final Long duration;
     private final Material type;
     private final int lightLevel;
+    private final Location location;
+    private final String serverName;
 
-    public XrayEvent(Player player, int amount, Long duration, Material type, int lightLevel) {
+    public XrayEvent(Player player, int amount, Long duration, Material type, int lightLevel, Location location, String serverName) {
         this.player = player;
         this.amount = amount;
         this.duration = duration;
         this.type = type;
         this.lightLevel = lightLevel;
+        this.location = location;
+        this.serverName = serverName;
     }
 
     public static HandlerList getHANDLERS() {
@@ -47,6 +52,14 @@ public class XrayEvent extends Event {
 
     public int getLightLevel() {
         return lightLevel;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public String getServerName() {
+        return serverName;
     }
 
     @Override
