@@ -8,9 +8,15 @@ public class BanEvent extends Event {
     private static final HandlerList HANDLERS = new HandlerList();
 
     private final IBan ban;
+    private final String banMessage;
 
-    public BanEvent(IBan ban) {
+    public BanEvent(IBan ban, String banMessage) {
         this.ban = ban;
+        this.banMessage = banMessage;
+    }
+
+    public String getBanMessage() {
+        return banMessage;
     }
 
     public IBan getBan() {
