@@ -17,14 +17,16 @@ public class SwitchStaffModeEvent extends Event {
     private final String serverName;
     private final String fromMode;
     private final String toMode;
+    private final IModeData modeData;
 
-    public SwitchStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName, String fromMode, String toMode) {
+    public SwitchStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName, String fromMode, String toMode, IModeData modeData) {
         this.playerName = playerName;
         this.playerUuid = playerUuid;
         this.location = location;
         this.serverName = serverName;
         this.fromMode = fromMode;
         this.toMode = toMode;
+        this.modeData = modeData;
     }
 
     public String getPlayerName() {
@@ -49,6 +51,10 @@ public class SwitchStaffModeEvent extends Event {
 
     public String getToMode() {
         return toMode;
+    }
+
+    public IModeData getModeData() {
+        return modeData;
     }
 
     @Override
