@@ -33,6 +33,7 @@ public class SppPlayer {
         this.username = username;
         this.online = true;
         this.player = player;
+        this.offlinePlayer = player;
     }
 
     public UUID getId() {

@@ -4,17 +4,28 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface IPlayerSession {
+
     UUID getUuid();
 
     String getName();
 
-    boolean isInStaffMode();
+    boolean isFrozen();
+
+    void setProtected(boolean aProtected);
+
+    boolean isProtected();
 
     Optional<String> getActiveStaffChatChannel();
 
-    boolean isFrozen();
+    void setActiveStaffChatChannel(String channel);
 
-    boolean isVanished();
+    void setUnderInvestigation(boolean underInvestigation);
+
+    void setMuted(boolean muted);
+
+    boolean isUnderInvestigation();
 
     boolean isMuted();
+
+    boolean isVanished();
 }
