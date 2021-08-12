@@ -1,5 +1,7 @@
 package net.shortninja.staffplusplus.session;
 
+import net.shortninja.staffplusplus.vanish.VanishType;
+
 import java.util.Optional;
 import java.util.UUID;
 
@@ -28,4 +30,8 @@ public interface IPlayerSession {
     boolean isMuted();
 
     boolean isVanished();
+
+    boolean isInStaffMode();
+
+    VanishType getVanishType();
 }
