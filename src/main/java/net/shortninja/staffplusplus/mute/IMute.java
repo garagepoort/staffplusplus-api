@@ -34,4 +34,6 @@ public interface IMute {
     String getHumanReadableDuration();
 
     String getServerName();
+
+    boolean isSoftMute();
 }
