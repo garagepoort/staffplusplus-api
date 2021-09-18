@@ -1,6 +1,7 @@
 package net.shortninja.staffplusplus.ban;
 
 import java.time.ZonedDateTime;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface IBan {
@@ -38,4 +39,6 @@ public interface IBan {
     boolean isSilentBan();
 
     boolean isSilentUnban();
+
+    Optional<String> getTemplate();
 }

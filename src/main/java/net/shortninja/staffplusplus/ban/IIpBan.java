@@ -34,4 +34,6 @@ public interface IIpBan {
     String getHumanReadableDuration();
 
     boolean isSubnet();
+
+    Optional<String> getTemplate();
 }
