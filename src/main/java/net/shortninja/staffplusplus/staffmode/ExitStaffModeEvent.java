@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import java.util.Optional;
 import java.util.UUID;
 
 public class ExitStaffModeEvent extends Event {
@@ -17,6 +18,17 @@ public class ExitStaffModeEvent extends Event {
     private final String serverName;
     private final String mode;
     private final IModeData modeData;
+    private Location teleportToLocation;
+
+    public ExitStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName, String mode, IModeData modeData, Location teleportToLocation) {
+        this.playerName = playerName;
+        this.playerUuid = playerUuid;
+        this.location = location;
+        this.serverName = serverName;
+        this.mode = mode;
+        this.modeData = modeData;
+        this.teleportToLocation = teleportToLocation;
+    }
 
     public ExitStaffModeEvent(String playerName, UUID playerUuid, Location location, String serverName, String mode, IModeData modeData) {
         this.playerName = playerName;
@@ -60,4 +72,7 @@ public class ExitStaffModeEvent extends Event {
         return HANDLERS;
     }
 
+    public Optional<Location> getTeleportToLocation() {
+        return Optional.ofNullable(teleportToLocation);
+    }
 }
