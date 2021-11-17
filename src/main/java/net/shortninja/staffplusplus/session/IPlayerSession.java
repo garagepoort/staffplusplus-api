@@ -34,4 +34,6 @@ public interface IPlayerSession {
     boolean isInStaffMode();
 
     VanishType getVanishType();
+
+    void setCanViewStyleIds(boolean canViewStyleIds);
 }
