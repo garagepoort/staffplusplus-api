@@ -1,6 +1,6 @@
 package net.shortninja.staffplusplus.playernotes;
 
-import org.bukkit.command.CommandSender;
+import net.shortninja.staffplusplus.session.SppInteractor;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
@@ -9,9 +9,9 @@ public class PlayerNoteCreatedEvent extends Event {
     private static final HandlerList HANDLERS = new HandlerList();
 
     private final IPlayerNote playerNote;
-    private final CommandSender sender;
+    private final SppInteractor sender;
 
-    public PlayerNoteCreatedEvent(IPlayerNote playerNote, CommandSender sender) {
+    public PlayerNoteCreatedEvent(IPlayerNote playerNote, SppInteractor sender) {
         this.playerNote = playerNote;
         this.sender = sender;
     }
@@ -20,7 +20,7 @@ public class PlayerNoteCreatedEvent extends Event {
         return playerNote;
     }
 
-    public CommandSender getSender() {
+    public SppInteractor getSender() {
         return sender;
     }
 
