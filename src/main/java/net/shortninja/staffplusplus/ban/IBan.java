@@ -1,10 +1,12 @@
 package net.shortninja.staffplusplus.ban;
 
+import net.shortninja.staffplusplus.appeals.Appealable;
+
 import java.time.ZonedDateTime;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface IBan {
+public interface IBan extends Appealable {
 
     int getId();
 

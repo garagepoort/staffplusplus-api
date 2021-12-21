@@ -1,28 +1,29 @@
-package net.shortninja.staffplusplus.warnings;
+package net.shortninja.staffplusplus.ban.appeals;
 
 import net.shortninja.staffplusplus.appeals.IAppeal;
+import net.shortninja.staffplusplus.ban.IBan;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class WarningAppealApprovedEvent extends Event {
+public class BanAppealRejectedEvent extends Event {
 
 
     private static final HandlerList HANDLERS = new HandlerList();
 
     private final IAppeal appeal;
-    private final IWarning warning;
+    private final IBan ban;
 
-    public WarningAppealApprovedEvent(IAppeal appeal, IWarning warning) {
+    public BanAppealRejectedEvent(IAppeal appeal, IBan ban) {
         this.appeal = appeal;
-        this.warning = warning;
+        this.ban = ban;
+    }
+
+    public IBan getBan() {
+        return ban;
     }
 
     public IAppeal getAppeal() {
         return appeal;
-    }
-
-    public IWarning getWarning() {
-        return warning;
     }
 
     @Override

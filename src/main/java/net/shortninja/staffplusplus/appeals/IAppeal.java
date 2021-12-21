@@ -1,7 +1,5 @@
 package net.shortninja.staffplusplus.appeals;
 
-import net.shortninja.staffplusplus.warnings.AppealStatus;
-
 import java.time.ZonedDateTime;
 import java.util.Optional;
 import java.util.UUID;
@@ -9,6 +7,8 @@ import java.util.UUID;
 public interface IAppeal {
 
     int getId();
+
+    int getAppealableId();
 
     UUID getAppealerUuid();
 
@@ -27,4 +27,6 @@ public interface IAppeal {
     Long getCreationTimestamp();
 
     ZonedDateTime getCreationDate();
+
+    AppealableType getType();
 }

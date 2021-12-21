@@ -1,4 +1,4 @@
-package net.shortninja.staffplusplus.warnings;
+package net.shortninja.staffplusplus.appeals;
 
 public enum AppealStatus {
     OPEN,
