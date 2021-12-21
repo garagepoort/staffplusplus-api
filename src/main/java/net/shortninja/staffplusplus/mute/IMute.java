@@ -1,9 +1,11 @@
 package net.shortninja.staffplusplus.mute;
 
+import net.shortninja.staffplusplus.appeals.Appealable;
+
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
-public interface IMute {
+public interface IMute extends Appealable {
 
     int getId();
 
