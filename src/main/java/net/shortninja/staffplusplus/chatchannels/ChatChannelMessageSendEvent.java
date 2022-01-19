@@ -1,6 +1,6 @@
 package net.shortninja.staffplusplus.chatchannels;
 
-import org.bukkit.command.CommandSender;
+import net.shortninja.staffplusplus.session.SppInteractor;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
@@ -8,11 +8,11 @@ public class ChatChannelMessageSendEvent extends Event {
 
     private static final HandlerList HANDLERS = new HandlerList();
 
-    private final CommandSender sender;
+    private final SppInteractor sender;
     private final String message;
     private final IChatChannel channel;
 
-    public ChatChannelMessageSendEvent(CommandSender sender, String message, IChatChannel channel) {
+    public ChatChannelMessageSendEvent(SppInteractor sender, String message, IChatChannel channel) {
         this.sender = sender;
         this.message = message;
         this.channel = channel;
@@ -22,7 +22,7 @@ public class ChatChannelMessageSendEvent extends Event {
         return message;
     }
 
-    public CommandSender getSender() {
+    public SppInteractor getSender() {
         return sender;
     }
 

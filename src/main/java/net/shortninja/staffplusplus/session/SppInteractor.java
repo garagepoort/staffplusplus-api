@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.session;
 
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 
 import java.util.Objects;
@@ -22,6 +23,10 @@ public class SppInteractor {
     public SppInteractor(UUID id, String username) {
         this.id = id;
         this.username = username;
+    }
+
+    public boolean isPlayer() {
+        return commandSender instanceof OfflinePlayer;
     }
 
     public UUID getId() {
