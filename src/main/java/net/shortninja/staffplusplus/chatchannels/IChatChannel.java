@@ -7,6 +7,8 @@ public interface IChatChannel {
 
     int getId();
 
+    String getName();
+
     String getChannelId();
 
     String getServerName();
@@ -16,4 +18,6 @@ public interface IChatChannel {
     String getLine();
 
     Set<UUID> getMembers();
+
+    ChatChannelType getType();
 }
