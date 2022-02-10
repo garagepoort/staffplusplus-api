@@ -25,7 +25,7 @@ public class SppInteractor {
         this.username = username;
     }
 
-    public boolean isPlayer() {
+    public boolean isBukkitPlayer() {
         return commandSender instanceof OfflinePlayer;
     }
 
