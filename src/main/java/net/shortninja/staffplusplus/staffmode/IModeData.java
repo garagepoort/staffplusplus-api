@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface IModeData {
@@ -15,7 +16,7 @@ public interface IModeData {
 
     ItemStack[] getPlayerInventory();
 
-    Location getPreviousLocation();
+    Optional<Location> getPreviousLocation();
 
     boolean hasFlight();
 
