@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.Optional;
 
@@ -19,8 +20,9 @@ public class XrayEvent extends Event {
     private final int lightLevel;
     private final Location location;
     private final String serverName;
+    private final ItemStack pickaxe;
 
-    public XrayEvent(Player player, int amount, Long duration, Material type, int lightLevel, Location location, String serverName) {
+    public XrayEvent(Player player, int amount, Long duration, Material type, int lightLevel, Location location, String serverName, ItemStack pickaxe) {
         this.player = player;
         this.amount = amount;
         this.duration = duration;
@@ -28,6 +30,7 @@ public class XrayEvent extends Event {
         this.lightLevel = lightLevel;
         this.location = location;
         this.serverName = serverName;
+        this.pickaxe = pickaxe;
     }
 
     public static HandlerList getHANDLERS() {
@@ -60,6 +63,10 @@ public class XrayEvent extends Event {
 
     public String getServerName() {
         return serverName;
+    }
+
+    public ItemStack getPickaxe() {
+        return pickaxe;
     }
 
     @Override
