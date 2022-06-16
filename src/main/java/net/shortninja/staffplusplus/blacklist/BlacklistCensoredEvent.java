@@ -1,4 +1,4 @@
-package net.shortninja.staffplusplus.chat;
+package net.shortninja.staffplusplus.blacklist;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

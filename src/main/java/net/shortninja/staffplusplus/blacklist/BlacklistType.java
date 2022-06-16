@@ -1,4 +1,4 @@
-package net.shortninja.staffplusplus.chat;
+package net.shortninja.staffplusplus.blacklist;
 
 public enum BlacklistType {
     CHAT,
