@@ -9,4 +9,6 @@ public interface MuteService {
     long getActiveMuteCount();
 
     List<? extends IMute> getAllPaged(int offset, int amount);
+
+    long getMuteCount(MuteFilters muteFilters);
 }
