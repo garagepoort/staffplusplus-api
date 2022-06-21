@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.warnings;
 
+import net.shortninja.staffplusplus.common.ISqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilters;
 import net.shortninja.staffplusplus.session.SppPlayer;
@@ -10,13 +11,13 @@ import java.util.List;
 
 public class WarningFilters extends SqlFilters {
 
-    private WarningFilters(List<SqlFilter> warningFilters) {
+    private WarningFilters(List<ISqlFilter> warningFilters) {
         super(warningFilters);
     }
 
     public static class WarningFiltersBuilder {
 
-        private List<SqlFilter> warningFilters = new ArrayList<>();
+        private List<ISqlFilter> warningFilters = new ArrayList<>();
 
         public WarningFiltersBuilder id(int id) {
             this.warningFilters.add(new SqlFilter<>(id, Types.INTEGER, "sp_warnings.id"));

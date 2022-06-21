@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.playernotes;
 
+import net.shortninja.staffplusplus.common.ISqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilters;
 import net.shortninja.staffplusplus.session.SppPlayer;
@@ -10,13 +11,13 @@ import java.util.List;
 
 public class PlayerNoteFilters extends SqlFilters {
 
-    public PlayerNoteFilters(List<SqlFilter> sqlFilters) {
+    public PlayerNoteFilters(List<ISqlFilter> sqlFilters) {
         super(sqlFilters);
     }
 
     public static class PlayerNoteFiltersBuilder {
 
-        private List<SqlFilter> sqlFilters = new ArrayList<>();
+        private List<ISqlFilter> sqlFilters = new ArrayList<>();
 
         public PlayerNoteFiltersBuilder id(int id) {
             this.sqlFilters.add(new SqlFilter<>(id, Types.INTEGER, "sp_player_notes.id"));

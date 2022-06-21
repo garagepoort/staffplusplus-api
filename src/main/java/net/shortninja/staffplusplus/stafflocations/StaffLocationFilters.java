@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.stafflocations;
 
+import net.shortninja.staffplusplus.common.ISqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilters;
 
@@ -9,13 +10,13 @@ import java.util.List;
 
 public class StaffLocationFilters extends SqlFilters {
 
-    public StaffLocationFilters(List<SqlFilter> sqlFilters) {
+    public StaffLocationFilters(List<ISqlFilter> sqlFilters) {
         super(sqlFilters);
     }
 
     public static class StaffLocationFiltersBuilder {
 
-        private List<SqlFilter> sqlFilters = new ArrayList<>();
+        private List<ISqlFilter> sqlFilters = new ArrayList<>();
 
         public StaffLocationFiltersBuilder id(int id) {
             this.sqlFilters.add(new SqlFilter<>(id, Types.INTEGER, "sp_staff_locations.id"));

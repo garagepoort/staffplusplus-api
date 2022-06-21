@@ -9,4 +9,6 @@ public interface BanService {
     long getActiveBanCount();
 
     List<? extends IBan> getAllPaged(int offset, int amount);
+
+    long getBanCount(BanFilters reportFilter);
 }

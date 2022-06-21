@@ -4,13 +4,13 @@ import java.util.List;
 
 public class SqlFilters {
 
-    protected List<SqlFilter> sqlFilters;
+    protected List<ISqlFilter> sqlFilters;
 
-    protected SqlFilters(List<SqlFilter> sqlFilters) {
+    protected SqlFilters(List<ISqlFilter> sqlFilters) {
         this.sqlFilters = sqlFilters;
     }
 
-    public List<SqlFilter> getSqlFilters() {
+    public List<ISqlFilter> getSqlFilters() {
         return sqlFilters;
     }
 }

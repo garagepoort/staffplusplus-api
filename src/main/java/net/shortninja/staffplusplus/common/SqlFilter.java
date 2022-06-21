@@ -1,10 +1,10 @@
 package net.shortninja.staffplusplus.common;
 
-public class SqlFilter<T> {
+public class SqlFilter<T> implements ISqlFilter{
 
-    private T value;
-    private int sqlType;
-    private String sqlColumn;
+    private final T value;
+    private final int sqlType;
+    private final String sqlColumn;
     private String operator = "=";
 
     public SqlFilter(T value, int sqlType, String sqlColumn) {

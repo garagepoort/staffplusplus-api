@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.reports;
 
+import net.shortninja.staffplusplus.common.ISqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilters;
 import net.shortninja.staffplusplus.session.SppPlayer;
@@ -11,13 +12,13 @@ import java.util.stream.Collectors;
 
 public class ReportFilters extends SqlFilters {
 
-    public ReportFilters(List<SqlFilter> sqlFilters) {
+    public ReportFilters(List<ISqlFilter> sqlFilters) {
         super(sqlFilters);
     }
 
     public static class ReportFiltersBuilder {
 
-        private List<SqlFilter> sqlFilters = new ArrayList<>();
+        private List<ISqlFilter> sqlFilters = new ArrayList<>();
 
         public ReportFiltersBuilder id(int id) {
             this.sqlFilters.add(new SqlFilter<>(id, Types.INTEGER, "sp_reports.id"));
