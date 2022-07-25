@@ -6,7 +6,7 @@
 
     <groupId>net.shortninja.staffplus</groupId>
     <artifactId>staffplusplus-api</artifactId>
-    <version>8.1.5</version>
+    <version>8.1.6</version>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
