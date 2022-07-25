@@ -10,10 +10,12 @@ public class VanishOnEvent extends Event {
 
     private final VanishType type;
     private final Player player;
+    private final boolean onJoin;
 
-    public VanishOnEvent(VanishType type, Player player) {
+    public VanishOnEvent(VanishType type, Player player, boolean onJoin) {
         this.type = type;
         this.player = player;
+        this.onJoin = onJoin;
     }
 
     public VanishType getType() {
@@ -22,6 +24,10 @@ public class VanishOnEvent extends Event {
 
     public Player getPlayer() {
         return player;
+    }
+
+    public boolean isOnJoin() {
+        return onJoin;
     }
 
     @Override
