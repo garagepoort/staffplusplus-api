@@ -15,4 +15,6 @@ public interface SessionManager {
     Collection<? extends IPlayerSession> getAll();
 
     Collection<? extends IPlayerSession> getOnlineStaffMembers();
+
+    boolean has(UUID uuid);
 }

@@ -2,6 +2,7 @@ package net.shortninja.staffplusplus.session;
 
 import net.shortninja.staffplusplus.vanish.VanishType;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -36,4 +37,8 @@ public interface IPlayerSession {
     VanishType getVanishType();
 
     void setCanViewStyleIds(boolean canViewStyleIds);
+
+    Map<String, Object> getSettings();
+
+    <T> T getSetting(String key);
 }
