@@ -63,6 +63,11 @@ public class BanFilters extends SqlFilters {
             return this;
         }
 
+        public BanFiltersBuilder reason(String reason) {
+            this.sqlFilters.add(new SqlFilter<>(reason, Types.VARCHAR, "sp_banned_players.reason"));
+            return this;
+        }
+
         public BanFiltersBuilder createdAfter(long timestamp) {
             this.sqlFilters.add(new SqlFilter<>(timestamp, Types.BIGINT, "sp_banned_players.creation_timestamp", ">="));
             return this;

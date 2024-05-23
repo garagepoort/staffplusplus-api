@@ -1,5 +1,6 @@
 package net.shortninja.staffplusplus.mute;
 
+import net.shortninja.staffplusplus.ban.BanFilters;
 import net.shortninja.staffplusplus.common.ISqlFilter;
 import net.shortninja.staffplusplus.common.OrSqlFilter;
 import net.shortninja.staffplusplus.common.SqlFilter;
@@ -24,11 +25,11 @@ public class MuteFilters extends SqlFilters {
             this.sqlFilters.add(new SqlFilter<>(id, Types.INTEGER, "sp_muted_players.ID"));
             return this;
         }
-        
+
         public MuteFiltersBuilder active() {
             this.sqlFilters.add(new OrSqlFilter<>(
-                new SqlFilter<>(null, Types.BIGINT, "sp_muted_players.end_timestamp"),
-                new SqlFilter<>(System.currentTimeMillis(), Types.BIGINT, "sp_muted_players.end_timestamp", ">")
+                    new SqlFilter<>(null, Types.BIGINT, "sp_muted_players.end_timestamp"),
+                    new SqlFilter<>(System.currentTimeMillis(), Types.BIGINT, "sp_muted_players.end_timestamp", ">")
             ));
             return this;
         }
@@ -60,6 +61,11 @@ public class MuteFilters extends SqlFilters {
 
         public MuteFiltersBuilder server(String server) {
             this.sqlFilters.add(new SqlFilter<>(server, Types.VARCHAR, "sp_muted_players.server_name"));
+            return this;
+        }
+
+        public MuteFiltersBuilder reason(String reason) {
+            this.sqlFilters.add(new SqlFilter<>(reason, Types.VARCHAR, "sp_muted_players.reason"));
             return this;
         }
 
