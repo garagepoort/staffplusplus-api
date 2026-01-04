@@ -21,10 +21,6 @@
             <id>staffplusplus-repo</id>
             <url>https://nexus.staffplusplus.org/repository/staffplusplus/</url>
         </repository>
-        <repository>
-            <id>staffplusplus-repo-spigot</id>
-            <url>https://nexus.staffplusplus.org/repository/spigot-releases/</url>
-        </repository>
     </repositories>
 
     <distributionManagement>
